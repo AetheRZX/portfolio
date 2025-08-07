@@ -1,0 +1,234 @@
+.experience-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.experience-item:nth-child(odd) {
+  padding-right: 50%;
+  text-align: right;
+}
+
+.experience-item:nth-child(even) {
+  padding-left: 50%;
+  text-align: left;
+}
+
+.experience-content {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  position: relative;
+  transition: var(--transition);
+  min-height: unset;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.experience-content:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.experience-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.experience-item:nth-child(odd) .experience-content::before {
+  right: -60px;
+}
+
+.experience-item:nth-child(even) .experience-content::before {
+  left: -60px;
+}
+
+.image-left {
+  flex-direction: row;
+}
+
+.image-right {
+  flex-direction: row-reverse;
+}
+
+.experience-image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 0 0 0;
+  flex-shrink: 0;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  background: #111;
+}
+
+.image-left .experience-image {
+  margin-right: 2rem;
+}
+
+.image-right .experience-image {
+  margin-left: 2rem;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-header h3 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.experience-year {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.experience-company {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.experience-advisor {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.experience-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.experience-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.achievement-tag {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.experience-image-outer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.experience-image-left {
+  left: -100px;
+}
+
+.experience-image-right {
+  right: -100px;
+}
+
+.experience-image-timeline {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 36px;
+  border: 8px solid var(--primary-color);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  background: #111;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .experience-image-left, .experience-image-right {
+    left: 0 !important;
+    right: 0 !important;
+    position: static;
+    transform: none;
+    margin: 0 auto 1.2rem auto;
+    display: block;
+    text-align: center;
+  }
+  .experience-image-timeline {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 1.2rem auto;
+    border-width: 6px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 20px;
+  }
+  
+  .experience-item:nth-child(odd),
+  .experience-item:nth-child(even) {
+    padding-left: 60px;
+    padding-right: 0;
+    text-align: left;
+  }
+  
+  .experience-item:nth-child(odd) .experience-content::before,
+  .experience-item:nth-child(even) .experience-content::before {
+    left: -40px;
+  }
+
+  .experience-content {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+    min-height: 120px;
+  }
+  .experience-image {
+    margin: 0 0 1.2rem 0;
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    display: block;
+  }
+} 

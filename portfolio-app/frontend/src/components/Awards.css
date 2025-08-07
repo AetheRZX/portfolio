@@ -1,0 +1,40 @@
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.award-card {
+  background: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.award-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.award-icon {
+  color: var(--accent-color);
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.award-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.award-year {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+} 
