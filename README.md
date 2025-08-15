@@ -250,7 +250,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 If you have any questions or need help with customization, feel free to reach out!
-
----
-
-**Built with ❤️ for the mechatronics community** 
